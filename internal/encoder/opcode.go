@@ -5,7 +5,7 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/goccy/go-json/internal/runtime"
+	"github.com/aexlab51/go-json/internal/runtime"
 )
 
 const uintptrSize = 4 << (^uintptr(0) >> 63)

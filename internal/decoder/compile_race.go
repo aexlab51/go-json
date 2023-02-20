@@ -7,7 +7,7 @@ import (
 	"sync"
 	"unsafe"
 
-	"github.com/goccy/go-json/internal/runtime"
+	"github.com/aexlab51/go-json/internal/runtime"
 )
 
 var decMu sync.RWMutex

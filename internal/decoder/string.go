@@ -9,7 +9,7 @@ import (
 	"unicode/utf8"
 	"unsafe"
 
-	"github.com/goccy/go-json/internal/errors"
+	"github.com/aexlab51/go-json/internal/errors"
 )
 
 type stringDecoder struct {

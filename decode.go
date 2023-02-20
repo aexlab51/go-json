@@ -7,9 +7,9 @@ import (
 	"reflect"
 	"unsafe"
 
-	"github.com/goccy/go-json/internal/decoder"
-	"github.com/goccy/go-json/internal/errors"
-	"github.com/goccy/go-json/internal/runtime"
+	"github.com/aexlab51/go-json/internal/decoder"
+	"github.com/aexlab51/go-json/internal/errors"
+	"github.com/aexlab51/go-json/internal/runtime"
 )
 
 type Decoder struct {
@@ -29,8 +29,8 @@ func unmarshal(data []byte, v interface{}, optFuncs ...DecodeOptionFunc) error {
 	//src := make([]byte, len(data)+1) // append nul byte to the end
 	//copy(src, data)
 	var src []byte
-	if len(data) == cap(data){
-		src = make([]byte, len(data)+1) 		// append nul byte to the end
+	if len(data) == cap(data) {
+		src = make([]byte, len(data)+1) // append nul byte to the end
 		copy(src, data)
 	} else {
 		src = append(data, nul)
@@ -64,8 +64,8 @@ func unmarshalContext(ctx context.Context, data []byte, v interface{}, optFuncs 
 	//src := make([]byte, len(data)+1) // append nul byte to the end
 	//copy(src, data)
 	var src []byte
-	if len(data) == cap(data){
-		src = make([]byte, len(data)+1) 		// append nul byte to the end
+	if len(data) == cap(data) {
+		src = make([]byte, len(data)+1) // append nul byte to the end
 		copy(src, data)
 	} else {
 		src = append(data, nul)
@@ -108,8 +108,8 @@ func extractFromPath(path *Path, data []byte, optFuncs ...DecodeOptionFunc) ([][
 	//src := make([]byte, len(data)+1) // append nul byte to the end
 	//copy(src, data)
 	var src []byte
-	if len(data) == cap(data){
-		src = make([]byte, len(data)+1) 		// append nul byte to the end
+	if len(data) == cap(data) {
+		src = make([]byte, len(data)+1) // append nul byte to the end
 		copy(src, data)
 	} else {
 		src = append(data, nul)
@@ -139,8 +139,8 @@ func unmarshalNoEscape(data []byte, v interface{}, optFuncs ...DecodeOptionFunc)
 	//src := make([]byte, len(data)+1) 			// append nul byte to the end
 	//copy(src, data)
 	var src []byte
-	if len(data) == cap(data){
-		src = make([]byte, len(data)+1) 		// append nul byte to the end
+	if len(data) == cap(data) {
+		src = make([]byte, len(data)+1) // append nul byte to the end
 		copy(src, data)
 	} else {
 		src = append(data, nul)
