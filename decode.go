@@ -136,7 +136,7 @@ func extractFromPath(path *Path, data []byte, optFuncs ...DecodeOptionFunc) ([][
 }
 
 func unmarshalNoEscape(data []byte, v interface{}, optFuncs ...DecodeOptionFunc) error {
-	//src := make([]byte, len(data)+1) // append nul byte to the end
+	//src := make([]byte, len(data)+1) 			// append nul byte to the end
 	//copy(src, data)
 	var src []byte
 	if len(data) == cap(data){
